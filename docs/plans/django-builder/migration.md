@@ -106,6 +106,17 @@ Only after main-domain acceptance and propagation:
 Do not disable Vercel or the old content API in this step: established clans may
 still depend on them.
 
+### DNS inventory refinement
+
+The existing tenant subdomains currently inherit a DNS-only Vercel CNAME at
+`*.clan.l33t.xyz`; the listed clans do not have individual DNS records. Keep that
+wildcard unchanged when switching the main domain. Use `/s/<handle>/` on the
+main site during controlled onboarding, or separately provision approved exact
+hostnames for new sites. Move each established clan using an exact DNS record
+only after its import passes acceptance. Switch the wildcard last, once all
+remaining consumers are ready, or explicitly pin every unmigrated consumer to
+its old origin first. Reserve the infrastructure hostname `preview` as well.
+
 ## Release B — migrate existing clans one at a time
 
 ### B1. Build the reviewed migration manifest
