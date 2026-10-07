@@ -52,7 +52,7 @@
         </fieldset>
         <label for="hero">Cover image</label>
         <select id="hero" name="hero">
-            <option value="">Use the illustrated landscape</option>
+            <option value="">Use the clan crest</option>
             {% for a in assets %}
                 <option value="{{ a.pk }}" {% if site.hero_id == a.pk %}selected{% endif %}>{{ a.name }}</option>
             {% endfor %}

@@ -25,10 +25,9 @@
                      src="{{ site.hero.get_absolute_url }}"
                      alt="{{ site.name }} cover">
             {% else %}
-                <div class="public-landscape">
-                    <div class="sun"></div>
-                    <div class="mountain back"></div>
-                    <div class="mountain front"></div>
+                <div class="public-arena" aria-hidden="true">
+                    <div class="arena-grid"></div>
+                    {% include "clans/emblem.html" %}
                 </div>
             {% endif %}
             <div class="clan-hero-copy">

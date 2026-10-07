@@ -55,3 +55,15 @@ Install `django/requirements.txt`, `requirements-builder.txt` and
 README; run migrations, tests and static collection. Start the local-mode
 Gunicorn preview, install Chromium, then run `django/scripts/test_browser.py`.
 The browser test creates synthetic sample tenants and is not for production.
+
+## Gamer visual identity iteration
+
+Replaced the cream/forest presentation with charcoal surfaces, electric violet,
+neon accents, bold sans-serif headings, channel-style example navigation and a
+geometric clan crest. Applied the identity to the landing page, studio, editor,
+settings and public pages. Existing theme choices remain distinct accents on
+the dark layout. No schema, account, authorization or publishing changes.
+
+Re-ran the upload → draft → publish → cover/theme → restore browser journey
+and all sixteen desktop/mobile route checks. No horizontal overflow or browser
+JavaScript errors; desktop and mobile screenshots visually reviewed.

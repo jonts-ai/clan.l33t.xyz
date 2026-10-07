@@ -388,7 +388,8 @@ def demo(request):
         s = services.create_site(
             u, "The Night Owls", "night-owls-" + suffix, "Adventures after dark"
         )
-        s.tagline = "Different time zones. Same campfire."
+        s.tagline = "Different time zones. One squad."
+        s.theme = "amethyst"
         s.save()
         p = s.pages.first()
         services.publish(s, u, p.pk, p.version)

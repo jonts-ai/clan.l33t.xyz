@@ -5,8 +5,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>{% block title %}Clan · A home for your people{% endblock %}</title>
-        <link rel="stylesheet" href="{% static 'clans/site.css' %}">
         {% block head %}{% endblock %}
+        <link rel="stylesheet" href="{% static 'clans/site.css' %}">
     </head>
     <body>
         {% if preview_mode %}
@@ -16,7 +16,7 @@
         {% endif %}
         <header class="topbar">
             <a class="brand" href="{{ central_origin }}/" aria-label="Clan home">
-                <span class="brand-mark">c.</span> clan<span class="brand-domain">/ l33t</span>
+                <span class="brand-mark" aria-hidden="true">//</span> clan<span class="brand-domain">/ l33t</span>
             </a>
             <nav aria-label="Main navigation">
                 {% if request.user.is_authenticated %}
@@ -28,7 +28,7 @@
                     </form>
                 {% else %}
                     <a href="{{ central_origin }}{% url 'login' %}">Sign in</a>
-                    <a class="button small" href="{{ central_origin }}{% url 'new_site' %}">Make a home <span>↗</span>
+                    <a class="button small" href="{{ central_origin }}{% url 'new_site' %}">Start a clan <span>↗</span>
                     </a>
                 {% endif %}
             </nav>
@@ -44,7 +44,7 @@
         <footer class="site-footer">
             <a class="brand" href="{{ central_origin }}/">clan<span class="brand-domain">/ l33t</span>
             </a>
-            <span>A little less setup. A lot more belonging.</span>
+            <span>Less setup. More squad.</span>
             <span>Built for your people.</span>
         </footer>
         {% block scripts %}{% endblock %}
