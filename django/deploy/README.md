@@ -41,3 +41,6 @@ is documented, not suppressed. Revisit before introducing email authentication.
 
 Billing/checkout, operational monitoring/backups, real OAuth/bot connection and
 legacy imports must be explicitly verified before calling this production-ready.
+
+For staged main-site cutover, GitHub Pages retirement, and per-clan content
+migration, see the [migration plan](../../docs/plans/django-builder/migration.md).

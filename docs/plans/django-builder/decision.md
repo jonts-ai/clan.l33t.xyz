@@ -26,3 +26,10 @@ Review and approve the implementation; provision isolated preview runtime;
 verify real Discord login and builder routing; import old content from reviewed
 exports; preserve old routing until a separately authorized cutover passes.
 Size allowances are provisional operator settings, not pricing commitments.
+
+## Rollout decision
+
+Separate main landing-page replacement from established-clan migrations. Retire
+GitHub Pages only after the main-domain cutover is verified; preserve the legacy
+services until their last tenant moves. See the [migration plan](migration.md)
+for evidence, launch gaps, acceptance gates and data-preserving rollback.
