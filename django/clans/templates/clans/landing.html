@@ -1,0 +1,118 @@
+{% extends "clans/base.html" %}
+{% block body %}
+    <main class="landing">
+        <section class="hero">
+            <div class="hero-copy">
+                <div class="eyebrow">
+                    <span class="dot"></span> YOUR PEOPLE. YOUR PLACE.
+                </div>
+                <h1>
+                    Every good clan
+                    <br>
+                    needs a <em>home.</em>
+                </h1>
+                <p class="lead">Not another noisy channel. A little corner of the internet for your stories, guides, and the people you play with.</p>
+                <div class="actions">
+                    <a href="{% url 'new_site' %}" class="button">Create your clan website <span>↗</span>
+                    </a>
+                    {% if demo_available %}
+                        <form action="{% url 'demo' %}" method="post">
+                            {% csrf_token %}
+                            <button class="button secondary">Try the editor</button>
+                        </form>
+                    {% endif %}
+                </div>
+                <p class="quiet">Start free · Bring your Discord · No code, no fuss</p>
+            </div>
+            <div class="hero-art" aria-label="Example of a clan website">
+                <div class="art-orbit"></div>
+                <div class="example-site">
+                    <div class="windowbar">
+                        <span>● ● ●</span>
+                        <span>night-owls.clan.l33t.xyz</span>
+                        <span>↗</span>
+                    </div>
+                    <div class="mini-nav">
+                        <b>◈ THE NIGHT OWLS</b>
+                        <span>Our story &nbsp; Field notes</span>
+                    </div>
+                    <div class="landscape">
+                        <div class="sun"></div>
+                        <div class="mountain back"></div>
+                        <div class="mountain front"></div>
+                        <span class="landscape-label">GOOD COMPANY. GREAT ADVENTURES.</span>
+                        <h2>
+                            Different time zones.
+                            <br>
+                            Same campfire.
+                        </h2>
+                    </div>
+                    <div class="mini-bottom">
+                        <span>↗ New here? Pull up a chair.</span>
+                        <span>EST. 2026</span>
+                    </div>
+                </div>
+                <div class="floating-note">
+                    <span>✦</span>
+                    <div>
+                        <b>Looks like you.</b>
+                        <small>Not like everyone else.</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="promise-strip">
+            <span>01 <b>Sign in with Discord</b>
+            </span>
+            <span>02 <b>Tell your story</b>
+            </span>
+            <span>03 <b>Make it yours</b>
+            </span>
+        </section>
+        <section class="feature-section">
+            <div class="section-intro">
+                <div class="eyebrow">LESS ADMIN. MORE ADVENTURE.</div>
+                <h2>
+                    A website, without
+                    <br>
+                    the side quest.
+                </h2>
+                <p>
+                    Just the things your community needs.
+                    <br>
+                    Nothing you have to learn a new language for.
+                </p>
+            </div>
+            <div class="feature-grid">
+                <article>
+                    <span class="feature-icon">Aa</span>
+                    <h3>Write it. See it.</h3>
+                    <p>Headings, links, photos, and stories. Edit the page itself—not a wall of code.</p>
+                </article>
+                <article>
+                    <span class="feature-icon">◈</span>
+                    <h3>Your Discord identity.</h3>
+                    <p>One familiar sign-in. Invite your trusted people to help keep things fresh.</p>
+                </article>
+                <article>
+                    <span class="feature-icon">↶</span>
+                    <h3>Room to get it right.</h3>
+                    <p>Save a draft, preview it, then publish. Earlier versions are always there.</p>
+                </article>
+                <article>
+                    <span class="feature-icon">✦</span>
+                    <h3>A helper with boundaries.</h3>
+                    <p>Connect a builder to your clan's channel. It works on your website, and only yours.</p>
+                </article>
+            </div>
+        </section>
+        <section class="end-card">
+            <div>
+                <div class="eyebrow">SMALL IS A FEATURE.</div>
+                <h2>Your next chapter starts here.</h2>
+                <p>Free to start. Room to grow when your community does.</p>
+            </div>
+            <a class="button" href="{% url 'new_site' %}">Let's make a home ↗</a>
+        </section>
+    </main>
+{% endblock %}
